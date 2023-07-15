@@ -17,37 +17,50 @@ public:
   void print();
 
   // for doubly linked list
-  /*
   Node * get_prev();
   void set_prev(Node* t);
-  */
+  
 };
 
 typedef Node *NodePtr; // synonym for Node*
 
-Node::Node(int x) {
+Node::Node(int x) 
+{
   value = x;
   nextPtr = NULL;
   prevPtr = nullptr;
 }
 
-Node::~Node() { cout << value << " deleted" << endl; }
+Node::~Node() 
+{ 
+  cout << value << " deleted" << endl;
+}
 
-NodePtr Node::get_next() { return nextPtr; }
+NodePtr Node::get_next() 
+{
+  return nextPtr; 
+}
 
-int Node::get_data() { return value; }
+int Node::get_data()
+{ 
+  return value; 
+}
 
-void Node::set_next(NodePtr next) {
+void Node::set_next(NodePtr next)
+{
   this->nextPtr = next; 
 }
 
-void Node::set_prev(NodePtr prev){
+void Node::set_prev(NodePtr prev)
+{
   this->prevPtr = prev;
 }
-Node* Node::get_prev(){
+Node* Node::get_prev()
+{
   return prevPtr;
 }
 
-void Node::print(){
+void Node::print()
+{
   cout << setw(3) << value;
 }
